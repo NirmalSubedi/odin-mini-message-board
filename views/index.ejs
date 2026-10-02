@@ -1,29 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= title %></title>
-  </head>
-  
-  <body>
-    <header>
-        <h1>Message Board</h1>
-    </header>
-    
-    <main class="main">
-    <% if (messages.length && messages.length > 0) { %>
-        
-     <% messages.forEach(message => { %>
-      <section class="message">
-        <p class="user"><%= message.user %></p>
-        <p class="text"><%= message.text %></p>
-        <p class="time"><%= message.time %></p>
-      </section>
-     <% }) %>
-    <% } else { %>
-        <p class="empty-board">No messages currently. Be the first message! :)</p>
-    <% } %>
-    </main>
-  </body>
-</html>
+<%- include('header', {title}) %>
+  <main class="main">
+    <h1>
+      <%= title %>
+    </h1>
+    <% if (messages.length> 0) { %>
+      <%- include('messages', {messages}) %>
+
+        <% } else { %>
+          <p class="empty-board">No messages currently. Be the first message! :)</p>
+          <% } %>
+            <a href="/new" class="create">Create Message</a>
+  </main>
+  <%- include('footer') %>

@@ -1,0 +1,22 @@
+<%- include('header', {title}) %>
+  <h1>
+    <%= title %>
+  </h1>
+  <%- include('messages') %>
+
+    <form action="/new" method="post">
+      <div class="form-field">
+        <label for="messageUser">Username</label>
+        <input type="text" name="messageUser" id="messageUser">
+      </div>
+
+      <div class="form-field">
+        <label for="messageText">Message</label>
+        <textarea name="messageText" id="messageText" cols="30" rows="4"></textarea>
+      </div>
+
+      <button type="submit" class="submit">Send Message</button>
+      <a href="/" class="cancel">Cancel</a>
+    </form>
+
+    <%- include('footer') %>

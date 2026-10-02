@@ -15,6 +15,7 @@ app.set(express.static(assetsPath));
 
 // Global MiddleWare
 app.use(requestLogger);
+app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.use("/", indexRouter);

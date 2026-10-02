@@ -9,6 +9,8 @@ export const requestLogger = (req, res, next) => {
     console.log(
       `${timeOfRequest} - ${req.method} ${req.originalUrl} ${res.statusCode} - ${responseDuration}`,
     );
+
+    if (req.body) console.log(req.body);
   });
 
   next();
