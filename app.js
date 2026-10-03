@@ -10,12 +10,11 @@ const PORT = 3000;
 app.set("views", path.join(import.meta.dirname, "views"));
 app.set("view engine", "ejs");
 
-const assetsPath = path.join(import.meta.dirname, "public");
-app.set(express.static(assetsPath));
-
 // Global MiddleWare
 app.use(requestLogger);
 app.use(express.urlencoded({ extended: true }));
+const assetsPath = path.join(import.meta.dirname, "public");
+app.use(express.static(assetsPath));
 
 // Routes
 app.use("/", indexRouter);

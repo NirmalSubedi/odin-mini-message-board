@@ -3,12 +3,12 @@
         <p class="user">
             <%= message.user %>
         </p>
+        <p class="time">
+            <%= message.time.toLocaleString() %>
+        </p>
         <p class="text">
             <%= message.text %>
         </p>
-        <p class="time">
-            <%= message.time %>
-        </p>
-        <a href="message/<%= index %>">View Details</a>
+        <a href="message/<%= index %>" class="message-details">View Details</a>
     </section>
     <% }) %>

@@ -5,10 +5,15 @@ const indexRouter = express.Router();
 const messages = [
   { text: "Hi there!", user: "Amando", time: new Date() },
   { text: "Hello World!", user: "Charles", time: new Date() },
+  {
+    text: "Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! Hello World! Hello World!",
+    user: "Bobby",
+    time: new Date(),
+  },
 ];
 
 indexRouter.get("/", (req, res) =>
-  res.render("index", { title: "Home", messages }),
+  res.render("index", { title: "Message Board", messages }),
 );
 
 indexRouter.get("/new", (req, res) =>

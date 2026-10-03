@@ -1,22 +1,22 @@
 <%- include('header', {title}) %>
-  <h1>
+  <h1 class="heading form-heading">
     <%= title %>
   </h1>
-  <%- include('messages') %>
+  <main class="main">
+    <%- include('messages') %>
+      <form action="/new" method="post" class="message-form">
+        <div class="form-field">
+          <label for="messageUser">Username</label>
+          <input type="text" name="messageUser" id="messageUser" class="messageUser" autofocus>
+        </div>
 
-    <form action="/new" method="post">
-      <div class="form-field">
-        <label for="messageUser">Username</label>
-        <input type="text" name="messageUser" id="messageUser">
-      </div>
+        <div class="form-field">
+          <label for="messageText">Message</label>
+          <textarea name="messageText" id="messageText" class="messageText" cols="30" rows="4"></textarea>
+        </div>
 
-      <div class="form-field">
-        <label for="messageText">Message</label>
-        <textarea name="messageText" id="messageText" cols="30" rows="4"></textarea>
-      </div>
+        <button type="submit" class="submit">Send Message</button>
+      </form>
+  </main>
 
-      <button type="submit" class="submit">Send Message</button>
-      <a href="/" class="cancel">Cancel</a>
-    </form>
-
-    <%- include('footer') %>
+  <%- include('footer') %>
