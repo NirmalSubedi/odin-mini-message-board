@@ -1,14 +1,14 @@
 <%- include('header') %>
 
     <main class="main message-details">
-        <p class="user">
-            <%= message.user %>
+        <p class="username">
+            <%= message.username %>
         </p>
-        <p class="time">
-            <%= message.time.toLocaleString() %>
+        <p class="post-time">
+            <%= message.post_time.toLocaleString() %>
         </p>
-        <p class="text">
-            <%= message.text %>
+        <p class="message">
+            <%= message.message %>
         </p>
     </main>
 

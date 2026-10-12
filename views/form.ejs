@@ -6,13 +6,13 @@
     <%- include('messages') %>
       <form action="/new" method="post" class="message-form">
         <div class="form-field">
-          <label for="messageUser">Username</label>
-          <input type="text" name="messageUser" id="messageUser" class="messageUser" autofocus>
+          <label for="message-user">Username</label>
+          <input type="text" name="messageUser" id="message-user" class="message-user" autofocus>
         </div>
 
         <div class="form-field">
-          <label for="messageText">Message</label>
-          <textarea name="messageText" id="messageText" class="messageText" cols="30" rows="4"></textarea>
+          <label for="message-text">Message</label>
+          <textarea name="messageText" id="message-text" class="message-text" cols="30" rows="4"></textarea>
         </div>
 
         <button type="submit" class="submit">Send Message</button>
