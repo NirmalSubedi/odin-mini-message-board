@@ -16,6 +16,14 @@ Sever-side message board.
 
 ##
 
+### Environments variables
+
+The expected environments variables for `.env` file is present at
+`.env.sample` file. Provide the values to the variables and remove the `.sample`
+suffix.
+
+##
+
 ### Credit:
 
 _Project From TOP (The Odin Project)_
