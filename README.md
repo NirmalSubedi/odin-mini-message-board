@@ -14,13 +14,13 @@ Sever-side message board.
 
 - Using MVC ( Mode-View-Controller ) design pattern to structure the codebase.
 
+- Adding data persistence with a relational database ( postgreSQL ) in the backend.
+
 ##
 
 ### Environments variables
 
-The expected environments variables for `.env` file is present at
-`.env.sample` file. Provide the values to the variables and remove the `.sample`
-suffix.
+The expected environments variables are present at `.env.sample` file. The file must be renamed to`.env.dev` or `.env.prod` for the respective environment you wish to run the app in.
 
 ##
 
