@@ -4,17 +4,19 @@ Sever-side message board.
 
 ## Skills Demonstrated
 
-- Using express to handle control flow of HTTP request in server with global middlewares and route mounted middlewares.
+- Using **express** to handle control flow of HTTP request in server with global middlewares and route mounted middlewares.
 
-- Gracefully handling error with an centralized error handling middleware.
+- Gracefully handle server errors with an centralized error handling middleware.
 
-- Rendering html templates with ejs to inject dynamic data and create an complete html page for client.
+- Rendering html templates with **ejs** to inject dynamic data and generate a complete html page for client.
 
-- Handling GET and POST requests from client to the server.
+- Handling GET and POST http requests during client and server communication.
 
 - Using MVC ( Mode-View-Controller ) design pattern to structure the codebase.
 
-- Adding data persistence with a relational database ( postgreSQL ) in the backend.
+- Adding data persistence with a relational database ( **postgreSQL** ) in the backend.
+
+- Validating inputs for message with **express-validator**.
 
 ##
 
@@ -24,6 +26,6 @@ The expected environments variables are present at `.env.sample` file. The file 
 
 ##
 
-### Credit:
+### Credit
 
 _Project From TOP (The Odin Project)_

@@ -7,12 +7,16 @@
       <form action="/new" method="post" class="message-form">
         <div class="form-field">
           <label for="message-user">Username</label>
-          <input type="text" name="messageUser" id="message-user" class="message-user" autofocus>
+          <%- include('field-error', {id:'message-user-error', error: locals.errors?.messageUser}) %>
+            <input type="text" name="messageUser" id="message-user" class="message-user"
+              aria-describedby="message-user-error" value="<%= locals.messageUser %>" autofocus>
         </div>
 
         <div class="form-field">
           <label for="message-text">Message</label>
-          <textarea name="messageText" id="message-text" class="message-text" cols="30" rows="4"></textarea>
+          <%- include('field-error', {id:'message-text-error', error: locals.errors?.messageText}) %>
+            <textarea name="messageText" id="message-text" class="message-text" cols="30" rows="4"
+              aria-describedby="message-text-error"><%= locals.messageText %></textarea>
         </div>
 
         <button type="submit" class="submit">Send Message</button>

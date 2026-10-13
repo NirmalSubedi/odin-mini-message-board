@@ -108,7 +108,8 @@ h6 {
   gap: 1rem 0;
 }
 
-.create {
+.create,
+.submit {
   text-align: center;
   padding: 0.5em;
   color: inherit;
@@ -125,6 +126,13 @@ h6 {
 }
 
 .form-field label {
+  font-size: 0.9rem;
+}
+
+.field-error {
+  display: block;
+  color: #ff0000;
+  font-weight: bold;
   font-size: 0.9rem;
 }
 

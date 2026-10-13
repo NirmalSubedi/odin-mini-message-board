@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node --env-file-if-exists=.env.dev --watch-path=. --watch-preserve-output app.js",
-    "prod": "node --env-file-if-exists=.env.prod --watch-path=. --watch-preserve-output app.js"
+    "dev:o": "npm run dev & google-chrome http://localhost:3000",
+    "prod": "node --env-file-if-exists=.env.prod --watch-path=. --watch-preserve-output app.js",
+    "populatedb": "node --env-file-if-exists=.env.dev ./db/populatedb.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,7 @@
   "dependencies": {
     "ejs": "^6.0.1",
     "express": "^5.2.1",
+    "express-validator": "^7.3.2",
     "pg": "^8.23.1"
   }
 }
